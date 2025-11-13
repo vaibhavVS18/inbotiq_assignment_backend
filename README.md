@@ -43,38 +43,31 @@ PORT=5000
 ### 1️⃣ Clone the repository
 
 ```sh
-git clone 
+git clone https://github.com/vaibhavVS18/inbotiq_assignment_backend.git
 2️⃣ Install dependencies
-sh
-Copy code
 npm install
+
 3️⃣ Start development server
-sh
-Copy code
 npm run dev
+
 Backend runs at:
-👉 http://localhost:5000
+👉 http://localhost:3001
 
 🔌 API Endpoints
 1️⃣ POST /auth/signup
 Request Body:
-
-json
-Copy code
 {
-  "name": "Vaibhav",
   "email": "abc@gmail.com",
-  "password": "123456",
+  "password": "abcd123456",
   "role": "User"
 }
 Response:
-
-json
-Copy code
 {
   "success": true,
   "message": "User registered successfully"
 }
+
+
 2️⃣ POST /auth/login
 Request Body:
 
@@ -94,14 +87,8 @@ Copy code
 }
 3️⃣ GET /auth/me (Protected)
 Headers:
-
-makefile
-Copy code
 Authorization: Bearer <jwt-token>
 Response:
-
-json
-Copy code
 {
   "id": "123",
   "name": "Vaibhav",
@@ -109,16 +96,11 @@ Copy code
   "role": "Admin"
 }
 🧪 Testing The API
-Use Postman / Thunder Client → Create token in /auth/login → Add to headers:
-
-makefile
-Copy code
+Use Postman  → Create token in /auth/login → Add to headers:
 Authorization: Bearer <token>
 Then call /auth/me.
 
 🏗 Production Build
-sh
-Copy code
 npm run build
 npm start
 🚀 Deployment Guide (Render / Railway)
@@ -130,19 +112,13 @@ Go to render.com → New Web Service
 Select your repository
 
 Set Build Command:
-
-nginx
-Copy code
 npm install
-Set Start Command:
 
-powershell
-Copy code
+Set Start Command:
 npm start
+
 Add environment variables:
 
-ini
-Copy code
 PORT=10000
 JWT_SECRET=your-secret
 DATABASE_URL=<db-url>
@@ -154,4 +130,6 @@ POST /auth/signup
 POST /auth/login
 
 GET /auth/me
+
+POST /auth/logout
 
