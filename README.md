@@ -32,9 +32,19 @@ It handles secure signup, login, role assignment (User/Admin), and a protected r
 Create a `.env` file based on `.env.example`.
 
 ### `.env`
-MONGO_URI=mongodb+srv://...
-JWT_SECRET=supersecret123
-PORT=5000
+PORT=3001
+MONGO_URI=
+
+REDIS_HOST=
+REDIS_PORT=
+REDIS_PASSWORD=
+
+JWT_SECRET=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_CALLBACK_URL=http://localhost:3001/auth/google/callback
+
+FRONTEND_URL=http://localhost:3000
 
 ---
 
